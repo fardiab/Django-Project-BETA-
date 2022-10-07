@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<body>
+{% block content %}
+
+<div class='container'>
+    <div class='form-group'>
+        <form method='POST' enctype="multipart/form-data">
+            {% csrf_token %}
+            <br>
+            {{ form.as_p }}
+            <button type='submit' class='btn btn-primary'>Create</button>
+        </form>
+</div>
+
+
+{% endblock %}
+</body>

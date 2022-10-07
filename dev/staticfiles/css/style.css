@@ -1,0 +1,11 @@
+.kart {
+    color: red;
+    position: relative;
+    display: inline-block;
+    top: 30px;
+}
+
+.container {
+    display: flex;
+}
+

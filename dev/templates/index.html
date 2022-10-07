@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+{% block content %}
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-10'>
+    {% for item in items %}
+    <div class='kart'>
+        <div class="card" style="width: 18rem;">
+            {% if item.image %}
+            <img src="{{ item.image.url }}" width=120 height=80 alt="Card image cap">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <p class="card-text">{{item.price}}</p>
+                <a href="{% url 'update_item' id=item.id %}" class="btn btn-primary">Update</a>
+                <a href="{% url 'delete_item' id=item.id %}" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+        
+</div>    
+</div>
+</div>
+<br>    
+{% endblock %}
+</body>

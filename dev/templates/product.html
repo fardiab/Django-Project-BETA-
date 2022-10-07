@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+<body>
+{% block content %}
+
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-24'>
+    {% for item in items %}
+    <div class='kart'>
+        <div class="card" style="width: 18rem;">
+            <img src="{{ item.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>    
+</div>
+</div>
+<br>
+
+
+
+{% endblock %}
+</body>
