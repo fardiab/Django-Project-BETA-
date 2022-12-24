@@ -6,7 +6,12 @@
 <div class="container">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        {% if request.user.is_authenticated %}
+        <h1>{{ request.user.username }} is authenticated</h1>
+        <span ><a href="{% url 'logout' %}">Logout</a></span>
+        {% endif %}
         <br>
+        
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">

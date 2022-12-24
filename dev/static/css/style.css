@@ -1,3 +1,23 @@
-h1 {
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.kart {
+    color: red;
+    position: relative;
+    display: inline-block;
+    top: 30px;
+}
+
+.container {
+    display: flex;
+}
+
+.user_authenticate {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    right: 0;
     color: red;
 }
